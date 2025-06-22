@@ -12,12 +12,16 @@ Python libraries essential for data handling like:
 
 numpy, pandas.
 
-difflib for identifying close string matches:
-TfidfVectorizer from sklearn for text vectorization:
+difflib for identifying close string matches.
+
+TfidfVectorizer from sklearn for text vectorization.
+
 cosine_similarity for movie similarity measurement.
 
 2. Loading the Dataset
+ 
 movies_data = pd.read_csv('movies.csv', low_memory=False)
+
 Loads the dataset containing metadata of movies such as:
 Title
 Genres
@@ -27,6 +31,7 @@ Overview
 Popularity, etc.
 
 3. Inspecting Data
+ 
 movies_data.head()
 
 Displays the first few rows, ensuring data format.
