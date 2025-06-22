@@ -28,13 +28,14 @@ Popularity, etc.
 
 3. Inspecting Data
 movies_data.head()
+
 Displays the first few rows, ensuring data format.
 
-5. Data Preprocessing
+4. Data Preprocessing
    
 Imported relevant features: ['genres', 'keywords', 'tagline', 'cast', 'director']
 
-6. Handling missing values:
+5. Handling missing values:
    
 Missing values are replaced with NaN, which are then replaced with empty strings:
 
@@ -44,7 +45,7 @@ The chosen textual features are joined into a single string:
 
 combined_features = movies_data['genres'] + movies_data['keywords'] + .
 
-7. TF-IDF Vectorization
+6. TF-IDF Vectorization
 
 Text data is transformed to numerical form using TF-IDF Vectorizer:
 
@@ -52,13 +53,13 @@ vectorizer = TfidfVectorizer()
 
 feature_vectors = vectorizer.fit_transform(combined_features)
 
-8. Similarity Calculation
+7. Similarity Calculation
    
 Cosine similarity is computed between movies according to their feature vectors:
 
 similarity = cosine_similarity(feature_vectors)
 
-9. User Input for Recommendation
+8. User Input for Recommendation
    
 User enters the name of his/her favorite movie:
 
@@ -66,7 +67,7 @@ movie_name = input("Enter your favourite movie name:")
 
 The system identifies the closest match using difflib.get_close_matches().
 
-10. Retrieving Similar Movies
+9. Retrieving Similar Movies
 The system:
 
 Retrieves the index of the matched movie.
@@ -77,7 +78,7 @@ Sorts them in descending order.
 
 Prints the top 20 similar movies to the user's input.
 
-11. Sample Output
+10. Sample Output
 If the user gives as input "Iron Man", the system could suggest:
 
             1. Up
